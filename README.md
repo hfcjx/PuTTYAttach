@@ -40,6 +40,10 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 6-7 是扩展功能，需要与pipPuTTY配合使用。
 
+pipPuTTYcn https://github.com/hfcjx/pipPuTTYcn
+
+pipPuTTYen 
+
 ## 介绍
 
 PuTTYAttach初始主页面如下
