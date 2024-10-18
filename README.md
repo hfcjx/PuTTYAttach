@@ -18,4 +18,11 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 是否可以开发一个软件，把superPuTTY 和 lrzsz 糅合在一起，满足设备交互的终端工具？于是有了PuTTYAttach。
 
+## 介绍
 
+PuTTYAttach主页面
+![image](https://github.com/user-attachments/assets/4abe48cc-aad0-42c0-8afa-dacff6099545)
+
+
+
+### 
