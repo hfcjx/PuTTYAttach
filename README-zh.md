@@ -46,7 +46,7 @@ pipPuTTYcn: https://github.com/hfcjx/pipPuTTYcn
 
 pipPuTTYen: https://github.com/hfcjx/pipPuTTYen 
 
-lrzsz: 
+lrzsz: https://github.com/hfcjx/lrzsz 
 
 ## 介绍
 
