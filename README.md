@@ -18,15 +18,47 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 是否可以开发一个软件，把superPuTTY 和 lrzsz 糅合在一起，满足设备交互的终端工具？于是有了PuTTYAttach。
 
+## 特点
+
+1.多标签管理PuTTY终端 ，
+
+2.管理PuTTY会话，支持分组和层次组合。
+
+3.连接后自动身份认证。
+
+4.登录后自动顺序发送命令序列。
+
+5.集成外部工具。
+
+6.Python脚本支持(V1.0版本不支持，计划以面版本实现)。
+
+7.整合lrzsz，支持XModem，YModem，ZModem协议下载和上传文件。
+
+注: 
+1~5 是PuTTYAttach 基础功能，适配原始的PuTTY终端和变种的PuTTY终端。
+6~7 是扩展功能，需要与pipPuTTY配合使用。
+
 ## 介绍
 
-PuTTYAttach主页面
+PuTTYAttach初始主页面如下
 ![image](/img/1.png)
+
+
+PuTTYAttach 多标签管理PuTTY终端 ，适配原始的PuTTY终端和变种的PuTTY终端。
+
 
 ### 会话列表
 
+主页面的左侧罗列PuTTY所有会话，新建文件夹可分组管理。
+
+双击会话连接，右键双击修改会话配置。
+
+会话的配置和层次结构保存在文件 session.json 中。
 
 ### 菜单和工具栏
+
+菜单项与工具栏基本是对应的。
+
 
 
 ### 新建会话对话框
