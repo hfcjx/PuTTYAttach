@@ -38,11 +38,15 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 1-5 是PuTTYAttach 基础功能，适配原始的PuTTY终端和变种的PuTTY终端。
 
-6-7 是扩展功能，需要与pipPuTTY配合使用。
+6-7 是扩展功能，需要pipPuTTY协同。
 
-pipPuTTYcn https://github.com/hfcjx/pipPuTTYcn
+7 需要lrzsz协同。
 
-pipPuTTYen https://github.com/hfcjx/pipPuTTYen
+pipPuTTYcn: https://github.com/hfcjx/pipPuTTYcn
+
+pipPuTTYen: https://github.com/hfcjx/pipPuTTYen 
+
+lrzsz: 
 
 ## 介绍
 
