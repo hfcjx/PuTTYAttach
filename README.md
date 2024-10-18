@@ -42,15 +42,13 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 pipPuTTYcn https://github.com/hfcjx/pipPuTTYcn
 
-pipPuTTYen 
+pipPuTTYen https://github.com/hfcjx/pipPuTTYen
 
 ## 介绍
 
 PuTTYAttach初始主页面如下
 ![image](/img/1.png)
 
-
-PuTTYAttach 多标签管理PuTTY终端 ，适配原始的PuTTY终端和变种的PuTTY终端。
 
 
 ### 会话列表
