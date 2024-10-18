@@ -21,8 +21,23 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 ## 介绍
 
 PuTTYAttach主页面
-![image](https://github.com/hfcjx/PuTTYAttach/tree/main/img/1.png)
+![image](/img/1.png)
+
+### 会话列表
 
 
+### 菜单和工具栏
 
-### 
+
+### 新建会话对话框
+
+
+### 设置选项
+
+
+### 文件传输设置
+
+
+### XYZModem 文件传输
+
+
