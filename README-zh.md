@@ -48,7 +48,7 @@ pipPuTTYen: https://github.com/hfcjx/pipPuTTYen
 
 lrzsz: https://github.com/hfcjx/lrzsz 
 
-## 介绍
+### 主页面
 
 PuTTYAttach初始主页面如下
 ![image](/img/1.png)
