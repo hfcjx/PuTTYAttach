@@ -34,7 +34,7 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 7.整合lrzsz，支持XModem，YModem，ZModem协议下载和上传文件。
 
-注: 
+【注】
 
 1-5 是PuTTYAttach 基础功能，适配原始的PuTTY终端和变种的PuTTY终端。
 
@@ -48,116 +48,39 @@ pipPuTTYen: https://github.com/hfcjx/pipPuTTYen
 
 lrzsz: https://github.com/hfcjx/lrzsz 
 
-### 主页面
+lrzsz-win32: https://github.com/trzsz/lrzsz-win32
 
-PuTTYAttach初始主页面如下
-![image](/img/1.png)
+## 实现
 
-(1) 菜单栏
+**多标签**
 
-(2) 工具栏
+PuTTY是独立程序，基于QT开发GUI程序，以子进程启动PuTTY很容易嵌入到QT窗口中。
 
-(3) PuTTY会话列表
+每个连接的PuTTY终端窗口，内嵌到QT多标签控件中即可实现会话多标签显示。
 
-(4) 连接的PuTTY终端
+**会话管理**
 
-(5) 状态栏，显示PuTTY会话的简要配置。
+会话管理分成两部分，一部分是PuTTY自身会话参数(参数1)，一部分是PuTTYAttach会话参数(参数2)。
 
-### 工具栏
+参数1是PuTTY终端连接相关的参数，由PuTTY维护，一般保存在./sessions目录或注册表中。
 
-![image](/img/2.png)
+参数2是会话扩展功能参数，如自动身份验证，序列命令发送，文件传输等。
 
-(1) 同步会话
+会话的增删查改都需要考虑参数1和参数2的同步问题。
 
-    同步PuTTY的会话到PuTTYAttach。
+使用子进程窗口内嵌功能，把参数1和参数2两个参数配置界面在一个窗口中显示，如此可降低会话同步的复杂性。
 
-    PuTTY是一个外部独立的程序，可直接管理其会话。可能与PuTTYAttach中的会话不再同步，此时可用"同步会话"功能把PuTTY的会话同步到PuTTYAttach。
+两个配置界面需要一个关键字关联起来才能实现同步。参数2以会话名为索引保存在./session.json中，参数1是PuTTY维护，以会话名来载入，保存，删除等，因此选择会话名作为关键字是合适的。
 
-(2) 新建会话
+这里带出一个问题，如何控制PuTTY会话的载入，保存，删除？
 
-    新建一个PuTTYAttach会话，同时在PuTTY中创建此会话。
+PuTTYAttach选择调用Windows API函数SendMessage在PuTTYAttach与PuTTY之间交互，控制PuTTY载入，保存，删除会话。
 
-(3) 新建组
+如此可以实现会话管理---会话增删查改参数的同步问题。
 
-    在会话列表新建一个文件夹，对会话分组管理。
-
-(4) 删除
-
-    删除PuTTYAttach会话或会话组(文件夹)。
-
-(5) 连接
-
-    连接会话列表中选中的会话，或连接下拉菜单中的会话。
-
-(6) 断开
-
-    断开当前标签的已连接终端。
-
-(7) 首选项
-
-    PuTTYAttach的主要配置项。
-
-(8) 传输选项
-
-    lrzsz外部程序的相关配置。
-
-(9) 文件下载
-
-    XModem，YModem，ZModem 协议文件下载。
-
-(10) 文件上传
-
-    XModem，YModem，ZModem 协议文件上传。
-
-(11) 关于
-
-    PuTTYAttach 关于对话框。
-
-### 菜单栏
-
-菜单栏与工具栏基本一致，除了下面两个菜单。
-
-![image](/img/3.png)
-
-(1) PuTTYAttach 页面布局设置
-
-    隐藏或显示"会话列表"; 隐藏或显示"工具栏"; 隐藏或显示"菜单栏"。
-
-(2) 罗列外部工具
-
-    把你常用的工具软件或其快捷方式复制到 ./exTools 目录，PuTTYAttach 为你将其添加到此菜单中，可快捷地打开对应的软件。
-
-### 会话列表
-
-主页面左侧是会话列表，罗列PuTTYAttach的所有会话，会话保存在 ./session.json 文件中。
-
-![image](/img/4.png)
-
-如上图所示，创建文件夹可分组管理会话。
-
-双击会话将连接会话，右键双击修改会话配置。
-
-### 多标签
-
-![image](/img/5.png)
-
-在标签头右击可弹出PuTTY的系统菜单。
-
-### 首选项
+【注】 采用SendMessage交互，除了pipPuTTY可用，原始PuTTY和其他PuTTY的分支同样可用，如KiTTY等。
 
 
-### 新建会话
-
-
-### 自动身份认证
-
-
-### 自动发送命令序列
-
-
-### 文件传输设置
-
-
-### XYZModem 文件传输
+**文件传输**
 
 
