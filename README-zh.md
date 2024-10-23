@@ -70,9 +70,13 @@ PuTTY是独立程序，基于QT开发GUI程序，以子进程启动PuTTY很容�
 
 使用子进程窗口内嵌功能，把参数1和参数2两个参数配置界面在一个窗口中显示，如此可降低会话同步的复杂性。
 
-两个配置界面需要一个关键字关联起来才能实现同步。参数2以会话名为索引保存在./session.json中，参数1是PuTTY维护，以会话名来载入，保存，删除等，因此选择会话名作为关键字是合适的。
+![image](img/sess.png)
 
-这里带出一个问题，如何控制PuTTY会话的载入，保存，删除？
+如何把参数1和参数2关联起来？通过会话名称。
+
+参数2以会话名称为索引保存在./session.json中，参数1是PuTTY维护，以会话名称载入，保存，删除，连接等，因此选择会话名作为关键字是合适的。
+
+选取关键字后，带出另一个问题，如何控制PuTTY会话的载入，保存，删除？
 
 PuTTYAttach选择调用Windows API函数SendMessage在PuTTYAttach与PuTTY之间交互，控制PuTTY载入，保存，删除会话。
 
@@ -80,7 +84,14 @@ PuTTYAttach选择调用Windows API函数SendMessage在PuTTYAttach与PuTTY之间�
 
 【注】 采用SendMessage交互，除了pipPuTTY可用，原始PuTTY和其他PuTTY的分支同样可用，如KiTTY等。
 
-
 **文件传输**
 
+lrzsz是开源软件，实现XModem，YModem，ZModem，已经非常成熟可靠。使用lrzsz实现XModem，YModem，ZModem实现文件传输是非常理想的选择。
 
+lrzsz是独立程序，PuTTY也是独立程序，如何连接两个程序实现文件传输？马上想出主意是PuTTYAttach作为桥梁连接lrzsz和PuTTY。
+
+浏览lrzsz源码，通过标准输入输出接收和发送数据，因此启动lrzsz子进程时必须对标准输入输出重定向。
+
+PuTTY作为GUI程序没有标准输入输出，无法作为数据接收发送管道，需要对PuTTY改造，因此就有了[pipPuTTY](https://github.com/hfcjx/pipPuTTYcn)
+
+**身份认证和登录命令发送**
