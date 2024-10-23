@@ -92,6 +92,27 @@ lrzsz是独立程序，PuTTY也是独立程序，如何连接两个程序实现�
 
 浏览lrzsz源码，通过标准输入输出接收和发送数据，因此启动lrzsz子进程时必须对标准输入输出重定向。
 
-PuTTY作为GUI程序没有标准输入输出，无法作为数据接收发送管道，需要对PuTTY改造，因此就有了[pipPuTTY](https://github.com/hfcjx/pipPuTTYcn)
+PuTTY是GUI程序没有标准输入输出，无法作为数据接收发送管道。对PuTTY改造，增加标准输入输出接收和发送数据，因此就有了[pipPuTTY](https://github.com/hfcjx/pipPuTTYcn).
+
+整个流程如下：
+
+1） PuTTYAttach创建匿名管道。
+2）启动PuTTY子进程，重定向到匿名管道。
+3) 启动lrzsz子进程，重定向到匿名管道。
+4) 文件传输开始。
 
 **身份认证和登录命令发送**
+
+身份认证和登录命令发送在开始的规划，是调用SendMessage模拟键盘按键方式发送给PuTTY，这方法非常通用可支持原始PuTTY和其他PuTTY的分支。
+
+[pipPuTTY](https://github.com/hfcjx/pipPuTTYcn) 增加标准输入输出管道，可以把远端服务器发送的数据转发到PuTTYAttach，PuTTYAttach也可通过管道向远端服务器发送消息。
+
+这就可以衍生很多有意思的扩展功能：
+
+1）等待远程服务器返回关键字。
+
+检测远程服务器发送的字符，抓取关键字触发身份认证的用户名和密码发送；触发命令发送。
+
+2) 脚本
+
+移植脚本语言解析器，可以运行自动化脚本与远程服务器交互。
