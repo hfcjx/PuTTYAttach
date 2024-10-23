@@ -42,6 +42,19 @@ PuTTYAttach是一个基于Windows的应用程序，用于多标签管理PuTTY终
 
 7 需要lrzsz协同。
 
+| 功能                         | 原始PuTTY | pipPuTTY |
+| ---------------------------- | --------- | -------- |
+| 会话管理                     | ●         | ●        |
+| 多标签                       | ●         | ●        |
+| 自动身份认证(提示方式)       |           | ●        |
+| 自动身份认证(延时方式)       | ●         | ●        |
+| 自动发送命令序列(Expect方式) |           | ●        |
+| 自动发送命令序列(延时方式)   | ●         | ●        |
+| 脚本                         |           | ●        |
+| 文件传输(XYZModem)           |           | ●        |
+
+
+
 pipPuTTYcn: https://github.com/hfcjx/pipPuTTYcn
 
 pipPuTTYen: https://github.com/hfcjx/pipPuTTYen 
