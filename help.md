@@ -24,7 +24,9 @@ PuTTYAttach初始主页面如下
 
     同步PuTTY的会话到PuTTYAttach。
 
-    PuTTY是一个外部独立的程序，可直接管理其会话。可能与PuTTYAttach中的会话不再同步，此时可用"同步会话"功能把PuTTY的会话同步到PuTTYAttach。
+    PuTTY是一个外部独立的程序，可直接管理其自身会话(一般保存在./sessions目录或注册表中)。
+    
+    这可能会出现PuTTYAttach保存的会话与PuTTY自身会话不同步，"同步会话"功能会把PuTTY的会话同步到PuTTYAttach。
 
 (2) 新建会话
 
