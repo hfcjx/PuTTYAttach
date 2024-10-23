@@ -96,14 +96,38 @@ PuTTYAttach初始主页面如下
 
 在标签头右击可弹出PuTTY的系统菜单。
 
-拖放文件到终端窗口，弹出文件上传菜单。(注: )
+![image](/img/6.png)
 
-
+拖放文件到终端窗口，弹出文件上传菜单。(注:需要pipPuTTY协同)
 
 ### 首选项
 
+![image](/img/7.png)
+
+(1) PuTTY程序文件的路径；相对路径也是有效的。
+
+(2) PuTTY会话文件保存的目录。
+
+    [PuTTY for win32 storing configuration into file (kotrla.net)](https://jakub.kotrla.net/putty/) 把原始版本PuTTY保存在注册表的会话保存到文件，这里设置保存这些文件的目录。
+
+(3) 等待putty.exe 启动时间。
+
+    启动时间超时，PuTTYAttach认为putty.exe启动失败。
+
+(4) PuTTYAttach退出时保存
+
+    1) 程序布局 :  会话列表，工具栏，菜单栏的布局。
+
+    2) 已打开的会话 : PuTTYAttach退出时，连接的会话。
+
+(5) 同时删除PuTTY会话
+
+    PuTTYAttach创建的会话参数保存在./session.json 文件，而PuTTY自身的会话参数保存在 (2) 选项的目录中。
+
+    删除会话时首先删除./session.json 文件中的会话，勾选此项会在 (2) 选项的目录删除PuTTY保存的会话。
 
 ### 新建会话
+
 
 
 ### 自动身份认证
