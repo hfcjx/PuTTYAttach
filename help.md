@@ -4,7 +4,7 @@
 ### 主页面
 
 PuTTYAttach初始主页面如下
-![image](/img/1.png)
+![image](img/1.png)
 
 (1) 菜单栏
 
