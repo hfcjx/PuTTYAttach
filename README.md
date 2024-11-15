@@ -38,4 +38,39 @@ PuTTY被称为世界上最好的 telnet / SSH 客户端，同时支持串口和T
 
 因此就有了一个想法，开发一个桥梁软件把PuTTY和lrzsz整合在一起，完成XModem，YModem，ZModem协议文件传输功能，后来把PuTTY的会话管理和多标签展示也实现了，于是就有了PuTTYAttach。
 
+## pipPuTTY
+
+pipPuTTY 是 PuTTY 0.81 版的分支。可以独立使用，也可以与PuTTYAttach配合使用。
+
+PuTTYAttach是PuTTY和lrzsz的桥梁，要与PuTTY交换数据，需要修改原版PuTTY的代码，这就是pipPuTTY了。
+
+PuTTYAttach通过重定向pipPuTTY的标准输入输出，stdin发送数据给PuTTY，stderr接收终端数据，stdout接收文件数据。
+
+另一种方式通过WM_COPYDATA消息交互数据，某些功能使用此方式。
+
+PuTTYAttach与原版PuTTY也可以搭配使用，只是某些功能无法使用。
+
+
+| 功能                         | 原始PuTTY | pipPuTTY |
+| ---------------------------- | --------- | -------- |
+| 会话管理                     | ●         | ●        |
+| 多标签                       | ●         | ●        |
+| 自动身份认证(提示方式)       |           | ●        |
+| 自动身份认证(延时方式)       | ●         | ●        |
+| 自动发送命令序列(Expect方式) |           | ●        |
+| 自动发送命令序列(延时方式)   | ●         | ●        |
+| 脚本                         |           | ●        |
+| 文件传输(XYZModem)           |           | ●        |
+
+## lrzsz-pip
+
+[lrzsz-pip](https://github.com/hfcjx/lrzsz-pip) 是 [lrzsz](https://github.com/trzsz/lrzsz-win32) 的分支。
+
+主要修改: 统一XModem,YModem，ZModem的调试信息的格式，方便PuTTYAttach解析文件传输过程的状态。
+
+PuTTYAttach 配合 [lrzsz-pip](https://github.com/hfcjx/lrzsz-pip) 和 [lrzsz](https://github.com/trzsz/lrzsz-win32)  都能完成文件传输功能。
+
+使用lrzsz-pip，文件传输的过程数据更完整和全面。
+
+
 
