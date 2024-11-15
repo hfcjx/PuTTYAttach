@@ -1,6 +1,6 @@
 # PuTTYAttach 简介
 
-PuTTYAttach打包发布，解压即可使用。
+PuTTYAttach已经打包发布，解压即可使用。
 
 ## PuTTYAttach是什么
 
