@@ -27,5 +27,15 @@ PuTTYAttach用于组织PuTTY会话和多标签展示PuTTY连接，支持XModem�
 
 ## 为什么有PuTTYAttach
 
+有一个设备具有一个简单的串口shell服务器，支持YModem协议上传和下载文件，使用免费版的XShell交互，一直很好地工作。
+
+现在设备需要增加TCP/IP连接，shell服务器同时支持串口和TCP-Raw连接，XShell不支持TCP-Raw，需要另寻其他的Shell工具。
+
+SecureCRT同时支持串口和TCP-Raw连接，Ymodem协议文件传输，很完美的完成交互工作，但是SecureCRT不是免费软件。
+
+PuTTY被称为世界上最好的 telnet / SSH 客户端，同时支持串口和TCP-Raw连接，开源免费，但是原生不支持YModem协议。
+无意间发现了XModem，YModem，ZModem协议的开源软件lrzsz，完美的支持YModem协议。
+
+因此就有了一个想法，开发一个桥梁软件把PuTTY和lrzsz整合在一起，完成XModem，YModem，ZModem协议文件传输功能，后来把PuTTY的会话管理和多标签展示也实现了，于是就有了PuTTYAttach。
 
 
