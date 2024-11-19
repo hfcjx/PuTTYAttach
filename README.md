@@ -48,6 +48,8 @@ PuTTYAttach通过重定向pipPuTTY的标准输入输出，stdin发送数据给Pu
 
 另一种方式通过WM_COPYDATA消息交互数据，某些功能使用此方式。
 
+如此可以不改变原版PuTTY的代码结构，尽量少的代码修改，只增加函数调用实现与PuTTYAttach配合。
+
 PuTTYAttach与原版PuTTY也可以搭配使用，只是某些功能无法使用。
 
 
