@@ -10,7 +10,7 @@ PuTTYAttach is a Windows program, specifically designed for the Microsoft® Wind
 
 PuTTYAttach is used for organizing PuTTY sessions and displaying multiple PuTTY connections in tabs. It supports file transfers using the XModem, YModem, and ZModem protocols, automatic username and password input, as well as the automated sending of preset command sequences.
 
-For a more detailed introduction, please refer to the [help document](/help_en.md) .
+For a more detailed introduction, please refer to the [help document](/help-en.md) .
 
 ## Technical Features
 
