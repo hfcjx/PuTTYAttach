@@ -1,4 +1,4 @@
-[中文](/readme.md)
+[中文](/README.md)
 
 ## PuTTYAttach Introduction
 
