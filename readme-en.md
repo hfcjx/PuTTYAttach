@@ -25,7 +25,8 @@ For a more detailed introduction, please refer to the [help document](/help-en.m
 - ★**Script Execution:** Allows the execution of custom scripts.
 
 **Note:**
-★Requires [pipPuTTYcn](https://github.com/hfcjx/pipPuTTYcn) or [pipPuTTYen](https://github.com/hfcjx/pipPuTTYen) for full functionality.*
+
+★ Requires [pipPuTTYcn](https://github.com/hfcjx/pipPuTTYcn) or [pipPuTTYen](https://github.com/hfcjx/pipPuTTYen) for full functionality.
 
 
 
