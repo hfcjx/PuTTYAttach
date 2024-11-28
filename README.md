@@ -1,3 +1,5 @@
+[English](/readme-en.md)
+
 # PuTTYAttach 简介
 
 PuTTYAttach已经打包发布，解压即可使用。
