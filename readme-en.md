@@ -2,7 +2,7 @@
 
 ## PuTTYAttach Introduction
 
-PuTTYAttach has been packaged and released, and it can be used by simply extracting the files.[release](https://github.com/hfcjx/PuTTYAttach/releases/tag/V1.0)
+PuTTYAttach has been packaged and released, and it can be used by simply extracting the files.[releases](https://github.com/hfcjx/PuTTYAttach/releases/tag/V1.0)
 
 ## What is PuTTYAttach?
 
