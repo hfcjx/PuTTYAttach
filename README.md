@@ -2,7 +2,7 @@
 
 # PuTTYAttach 简介
 
-PuTTYAttach已经打包发布，解压即可使用。[发布](https://github.com/hfcjx/PuTTYAttach/releases/tag/V1.0)
+PuTTYAttach已经打包发布，解压即可使用。[发布](https://github.com/hfcjx/PuTTYAttach/releases)
 
 ## PuTTYAttach是什么
 
